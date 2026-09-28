@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Operadores de Comparação</title>
+
+    <style>
+        .comparacao {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .comparacao input {
+            width: 150px;
+            height: 25px;
+            box-sizing: border-box;
+        }
+
+        .operador {
+            width: 30px;
+            text-align: center;
+        }
+
+        .comparacao button {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="comparacao">
+        <input type="text" id="a">
+        <span class="operador">==</span>
+        <input type="text" id="b">
+        <button onclick="comparar('==', 'a', 'b')">Comparar</button>
+    </div>
+
+    <div class="comparacao">
+        <input type="text" id="c">
+        <span class="operador">!=</span>
+        <input type="text" id="d">
+        <button onclick="comparar('!=', 'c', 'd')">Comparar</button>
+    </div>
+
+    <div class="comparacao">
+        <input type="text" id="e">
+        <span class="operador">&gt;</span>
+        <input type="text" id="f">
+        <button onclick="comparar('>', 'e', 'f')">Comparar</button>
+    </div>
+
+    <div class="comparacao">
+        <input type="text" id="g">
+        <span class="operador">&gt;=</span>
+        <input type="text" id="h">
+        <button onclick="comparar('>=', 'g', 'h')">Comparar</button>
+    </div>
+
+    <div class="comparacao">
+        <input type="text" id="i">
+        <span class="operador">&lt;</span>
+        <input type="text" id="j">
+        <button onclick="comparar('<', 'i', 'j')">Comparar</button>
+    </div>
+
+    <div class="comparacao">
+        <input type="text" id="k">
+        <span class="operador">&lt;=</span>
+        <input type="text" id="l">
+        <button onclick="comparar('<=', 'k', 'l')">Comparar</button>
+    </div>
+
+    <script>
+        function comparar(operador, id1, id2) {
+            let a = document.getElementById(id1).value;
+            let b = document.getElementById(id2).value;
+            let resultado;
+
+            if (operador == '==') resultado = a == b;
+            if (operador == '!=') resultado = a != b;
+            if (operador == '>') resultado = a > b;
+            if (operador == '>=') resultado = a >= b;
+            if (operador == '<') resultado = a < b;
+            if (operador == '<=') resultado = a <= b;
+
+            if (resultado)
+                alert("VERDADEIRO");
+            else
+                alert("FALSO");
+        }
+    </script>
+
+</body>
+</html>
