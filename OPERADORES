@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Operadores de Comparação</title>
+
+    <style>
+        input {
+            width: 150px;
+            height: 25px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>
+        <input type="text" id="a"> == <input type="text" id="b">
+        <button onclick="comparar('==', 'a', 'b')">Comparar</button>
+    </p>
+
+    <p>
+        <input type="text" id="c"> != <input type="text" id="d">
+        <button onclick="comparar('!=', 'c', 'd')">Comparar</button>
+    </p>
+
+    <p>
+        <input type="text" id="e"> &gt; <input type="text" id="f">
+        <button onclick="comparar('>', 'e', 'f')">Comparar</button>
+    </p>
+
+    <p>
+        <input type="text" id="g"> &gt;= <input type="text" id="h">
+        <button onclick="comparar('>=', 'g', 'h')">Comparar</button>
+    </p>
+
+    <p>
+        <input type="text" id="i"> &lt; <input type="text" id="j">
+        <button onclick="comparar('<', 'i', 'j')">Comparar</button>
+    </p>
+
+    <p>
+        <input type="text" id="k"> &lt;= <input type="text" id="l">
+        <button onclick="comparar('<=', 'k', 'l')">Comparar</button>
+    </p>
+
+    <script>
+        function comparar(operador, id1, id2) {
+            let a = document.getElementById(id1).value;
+            let b = document.getElementById(id2).value;
+            let resultado;
+
+            if (operador == '==') resultado = a == b;
+            if (operador == '!=') resultado = a != b;
+            if (operador == '>') resultado = a > b;
+            if (operador == '>=') resultado = a >= b;
+            if (operador == '<') resultado = a < b;
+            if (operador == '<=') resultado = a <= b;
+
+            if (resultado)
+                alert("VERDADEIRO");
+            else
+                alert("FALSO");
+        }
+    </script>
+
+</body>
+</html>
